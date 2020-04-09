@@ -19,3 +19,8 @@ jobs:
         curl -fsSL https://raw.githubusercontent.com/P3TERX/dotfiles/master/.bashrc >> ~/.bashrc
     - name: SSH connection to Actions
       uses: P3TERX/debugger-action@master
+    - name: Upload firmware directory
+      uses: actions/upload-artifact@master
+      with:
+        name: s905_firmware
+        path: /Build-Armbian/output/images
